@@ -2,6 +2,8 @@
 
 In flutter event calendar, you can get the tapped `DateTime` details of header, view header and calendar cell using `OnTap` event of the calendar.
 
+![Getting datetime details from calendar element](https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/getting%20calendar%20element%20details.gif)
+
 ## Step 1
 In initState(), set the default values such as view, alert dialog texts.
 ```xml
