@@ -2,7 +2,7 @@
 
 In flutter event calendar, you can get the tapped `DateTime` details of header, view header and calendar cell using `OnTap` event of the calendar.
 
-![Getting datetime details from calendar element](https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/getting%20calendar%20element%20details.gif)
+<img alt="Getting datetime details from calendar element"  src="https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/getting%20calendar%20element%20details.gif" width="250" height="400" />|
 
 ## Step 1
 In initState(), set the default values such as view, alert dialog texts.
@@ -72,7 +72,7 @@ void calendarTapped(CalendarTapDetails details) {
 **[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/10998/how-to-get-datetime-details-while-tapping-the-flutter-event-calendar-elements)**
 **Screenshots**
 
-![header](https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/header.jpg)
-![view header](https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/view%20header.jpg)
-![cells](https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/cells.jpg)
 
+<img alt="header"  src="https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/header.jpg" width="250" height="400" />|
+<img alt="view header"  src="https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/view%20header.jpg" width="250" height="400" />|
+<img alt="cells"  src="https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/cells.jpg" width="250" height="400" />|
