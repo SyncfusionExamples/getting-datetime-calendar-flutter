@@ -69,6 +69,9 @@ void calendarTapped(CalendarTapDetails details) {
           });
     }
 ```
+**[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/10998/how-to-get-datetime-details-while-tapping-the-flutter-event-calendar-elements)**
+**Screenshots**
+
 ![header](https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/header.jpg)
 ![view header](https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/view%20header.jpg)
 ![cells](https://github.com/SyncfusionExamples/getting-datetime-calendar-fluter/blob/master/screenshots/cells.jpg)
