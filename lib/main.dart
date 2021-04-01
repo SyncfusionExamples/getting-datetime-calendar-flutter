@@ -9,7 +9,7 @@ void main() => runApp(DateTimeDetails());
 class DateTimeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( 
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: EventCalendar(),
     );
@@ -40,13 +40,12 @@ List<String> views = <String>[
 ];
 
 class ScheduleExample extends State<EventCalendar> {
-  CalendarView _calendarView;
-  String _text, _titleText;
-  Color headerColor, viewHeaderColor, calendarColor, defaultColor;
+  CalendarView _calendarView=CalendarView.week;
+  String? _text, _titleText;
+  Color? headerColor, viewHeaderColor, calendarColor, defaultColor;
 
   @override
   void initState() {
-    _calendarView = CalendarView.week;
     _text='';
     _titleText='';
     super.initState();
@@ -146,38 +145,36 @@ class ScheduleExample extends State<EventCalendar> {
   }
 
   void calendarTapped(CalendarTapDetails details) {
-      if (details.targetElement == CalendarElement.header) {
-        _text = DateFormat('MMMM yyyy')
-            .format(details.date)
-            .toString();
-        _titleText='Header';
-      }
-      else if (details.targetElement == CalendarElement.viewHeader) {
-        _text = DateFormat('EEEE dd, MMMM yyyy')
-            .format(details.date)
-            .toString();
-        _titleText='View Header';
-      }
-      else if (details.targetElement == CalendarElement.calendarCell) {
-        _text = DateFormat('EEEE dd, MMMM yyyy')
-            .format(details.date)
-            .toString();
-        _titleText='Calendar cell';
-      }
-        showDialog(
-            context: context,
-            builder: (BuildContext context) {
-              return AlertDialog(
-                title:Container(child: new Text(" $_titleText")),
-                content:Container(child: new Text(" $_text")),
-                actions: <Widget>[
-                  new FlatButton(onPressed: (){
-                    Navigator.of(context).pop();
-                  }, child: new Text('close'))
-                ],
-              );
-            });
-      }
+    if (details.targetElement == CalendarElement.header) {
+      _text = DateFormat('MMMM yyyy')
+          .format(details.date!)
+          .toString();
+      _titleText='Header';
+    }
+    else if (details.targetElement == CalendarElement.viewHeader) {
+      _text = DateFormat('EEEE dd, MMMM yyyy')
+          .format(details.date!)
+          .toString();
+      _titleText='View Header';
+    }
+    else if (details.targetElement == CalendarElement.calendarCell) {
+      _text = DateFormat('EEEE dd, MMMM yyyy')
+          .format(details.date!)
+          .toString();
+      _titleText='Calendar cell';
+    }
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title:Container(child: new Text(" $_titleText")),
+            content:Container(child: new Text(" $_text")),
+            actions: <Widget>[
+              new FlatButton(onPressed: (){
+                Navigator.of(context).pop();
+              }, child: new Text('close'))
+            ],
+          );
+        });
   }
-
-
+}
