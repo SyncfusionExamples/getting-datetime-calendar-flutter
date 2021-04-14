@@ -29,7 +29,7 @@ List<String> colors = <String>[
 ];
 
 class ScheduleExample extends State<EventCalendar> {
-  CalendarController _controller = CalendarController();
+  final CalendarController _controller = CalendarController();
   String? _text='', _titleText='';
   Color? _headerColor, _viewHeaderColor, _calendarColor;
 
