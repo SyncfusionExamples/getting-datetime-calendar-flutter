@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(DateTimeDetails());
+void main() => runApp(const DateTimeDetails());
 
 class DateTimeDetails extends StatelessWidget {
+  const DateTimeDetails({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: EventCalendar(),
     );
@@ -16,6 +17,8 @@ class DateTimeDetails extends StatelessWidget {
 }
 
 class EventCalendar extends StatefulWidget {
+  const EventCalendar({super.key});
+
   @override
   State<StatefulWidget> createState() => ScheduleExample();
 }
@@ -41,7 +44,7 @@ class ScheduleExample extends State<EventCalendar> {
         appBar: AppBar(
           actions: <Widget>[
             PopupMenuButton<String>(
-              icon: Icon(Icons.color_lens),
+              icon: const Icon(Icons.color_lens),
               itemBuilder: (BuildContext context) {
                 return colors.map((String choice) {
                   return PopupMenuItem<String>(
@@ -79,24 +82,28 @@ class ScheduleExample extends State<EventCalendar> {
           ],
           backgroundColor: _headerColor,
         ),
-        body: Expanded(
-          child: SfCalendar(
-            viewHeaderStyle:
-            ViewHeaderStyle(backgroundColor: _viewHeaderColor),
-            backgroundColor: _calendarColor,
-            view: CalendarView.week,
-            controller: _controller,
-            allowedViews: [
-              CalendarView.day,
-              CalendarView.week,
-              CalendarView.workWeek,
-              CalendarView.month,
-              CalendarView.timelineDay,
-              CalendarView.timelineWeek,
-              CalendarView.timelineWorkWeek
-            ],
-            onTap: calendarTapped,
-          ),
+        body: Column(
+          children: [
+            Expanded(
+              child: SfCalendar(
+                viewHeaderStyle:
+                ViewHeaderStyle(backgroundColor: _viewHeaderColor),
+                backgroundColor: _calendarColor,
+                view: CalendarView.week,
+                controller: _controller,
+                allowedViews: const [
+                  CalendarView.day,
+                  CalendarView.week,
+                  CalendarView.workWeek,
+                  CalendarView.month,
+                  CalendarView.timelineDay,
+                  CalendarView.timelineWeek,
+                  CalendarView.timelineWorkWeek
+                ],
+                onTap: calendarTapped,
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -117,14 +124,14 @@ class ScheduleExample extends State<EventCalendar> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Container(child: new Text(" $_titleText")),
-            content: Container(child: new Text(" $_text")),
+            title: Container(child: Text(" $_titleText")),
+            content: Container(child: Text(" $_text")),
             actions: <Widget>[
-              new TextButton(
+              TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: new Text('close'))
+                  child: Text('close'))
             ],
           );
         });
