@@ -4,6 +4,8 @@ A quick-start example to help you to get Datetime details while tapping the Flut
 
 Using the `OnTap` event in the Flutter Event Calendar, you can get the tapped `DateTime` details of the header, view header, and calendar cell.
 
+![GetDateTimeDetails](https://user-images.githubusercontent.com/46158936/209669752-1e32d144-50fe-4380-bc24-ea82152c3403.gif)
+
 For more details, refer to our [KB](https://www.syncfusion.com/kb/10998/how-to-get-datetime-details-while-tapping-the-flutter-calendar) documentation.
 
 ## Requirements to run the demo
