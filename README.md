@@ -1,4 +1,4 @@
-# Flutter
+# Flutter Calendar DateTime details from onTap event
 
 
 This repository contains a sample that demonstrates how to get the DateTime details from header, view header, and calendar cell using onTap event in Syncfusion® Calendar package.
